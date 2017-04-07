@@ -13,6 +13,28 @@
     	
     	
         <plugins>
+        
+        
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                  <version>2.4</version>
+                <configuration>
+                    <warSourceDirectory>webapp</warSourceDirectory>
+                </configuration>
+            </plugin>
+            
+             <plugin>
+     			<artifactId>maven-eclipse-plugin</artifactId>
+     			<version>2.9</version>
+   				  <configuration>
+    			    <wtpversion>2.0</wtpversion>
+   				     <wtpContextName>/</wtpContextName>
+  				  </configuration>
+ 		   </plugin>
+            
+
+    
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -20,12 +42,14 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
-                    <encoding>UTF-8</encoding>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    
+                    <encoding>UTF-8</encoding>                
                 </configuration>
             </plugin>
+            
+            
         </plugins>
+        
+        
     </build>
     
 
